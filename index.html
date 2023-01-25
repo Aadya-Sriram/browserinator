@@ -3,89 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-sca-+le=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
-    <div  id='myDiv' style='width:100%;height:1000px;'>
-    <script src="script.js"></script>
-<div style="text-align: center;"><input style="outline: none;border:0;margin-top:20%;width:30%;height: 30px; border-radius: 10px;text-align: center;"placeholder="Search the web..." type="text" name="" id="search-input"></div> 
-<iframe style="outline: none;border: none;padding-top: 0;" data-widget-name="" name="NewsWidget" src="https://darqube.com/external-embedding/news-widget?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3aWRnZXQiOnsibmV3cyI6WyJDTkJDIiwiRGFpbHlmeCIsIkNOTiIsIlJldXRlcnMiLCJDcnlwdG9HbG9iZSJdLCJ0d191aWRzIjpbIjY5NjIwNzEzIiwiOTI4NzU5MjI0NTk5MDQwMDAxIiwiNjI0NDEzIiwiMTUxMTAzNTciLCIyMDI0Mzc0NCJdfSwid190eXBlIjoiTmV3c1dpZGdldCIsImZlX2NmZyI6eyJjbW9kZSI6MCwiZmNsciI6InJnYmEoMjU1LCAyNTUsIDI1NSwgMSkiLCJiZyI6InJnYmEoMjEsIDI1LCAzMCwgMSkiLCJoIjo3NjUsInciOjMzMCwiYXN6Ijp0cnVlLCJmdCI6ImRlZmF1bHQiLCJodCI6Im5vbmUiLCJ0cmgiOltdLCJjaGMiOiJyZ2JhKDIzNywgNTAsIDk4LCAxKSIsImNuIjoiIiwibG5nIjoiZW4iLCJoZGljbiI6ZmFsc2UsInd0bVYiOnsidHlwZSI6IkRhcnF1YmUiLCJlbmFibGVkIjp0cnVlfX0sImV4cCI6MTY3NzA3MjY3MCwic3ViIjoiYWNjZXNzIn0.NANxkCNi5jiHYWdCxrWZj3vqurwNSZuCmPppaKfVhFA" id="NewsWidget" width="430px" height="40%" ></iframe>
+<body>
 
-
-<script>
-    (function(d, s, id) {
-        if (d.getElementById(id)) {
-            if (window.__TOMORROW__) {
-                window.__TOMORROW__.renderWidget();
-            }
-            return;
-        }
-        const fjs = d.getElementsByTagName(s)[0];
-        const js = d.createElement(s);
-        js.id = id;
-        js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
-
-        fjs.parentNode.insertBefore(js, fjs);
-    })(document, 'script', 'tomorrow-sdk');
-    </script>
-
-    <div class="tomorrow"
-       data-location-id=""
-       data-language="EN"
-       data-unit-system="METRIC"
-       data-skin="dark"
-       data-widget-type="upcoming"
-       style="padding-bottom:22px;position:relative;width: 430px;"
-    >
    
-    
-      </a>
-      
+  <div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+ </div>
+ <div style="background-color: #15191e; width: 500px;height: 720px;">
+  <iframe style="border: none; width:600px; height: 740px;" data-widget-name="" name="NewsWidget" src="https://darqube.com/external-embedding/news-widget?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ3aWRnZXQiOnsibmV3cyI6WyJDTkJDIiwiRGFpbHlmeCIsIkNOTiIsIlJldXRlcnMiLCJDcnlwdG9HbG9iZSJdLCJ0d191aWRzIjpbIjY5NjIwNzEzIiwiOTI4NzU5MjI0NTk5MDQwMDAxIiwiNjI0NDEzIiwiMTUxMTAzNTciLCIyMDI0Mzc0NCJdfSwid190eXBlIjoiTmV3c1dpZGdldCIsImZlX2NmZyI6eyJjbW9kZSI6MCwiZmNsciI6InJnYmEoMjU1LCAyNTUsIDI1NSwgMSkiLCJiZyI6InJnYmEoMjEsIDI1LCAzMCwgMSkiLCJoIjo3NDAsInciOjYwMCwiYXN6IjpmYWxzZSwiZnQiOiJkZWZhdWx0IiwiaHQiOiJub25lIiwidHJoIjpbXSwiY2hjIjoicmdiYSgyMzcsIDUwLCA5OCwgMSkiLCJiZSI6dHJ1ZSwiYmMiOiJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiLCJidyI6MSwiY24iOiIiLCJsbmciOiJlbiIsImhkaWNuIjpmYWxzZSwid3RtViI6eyJ0eXBlIjoiRGFycXViZSIsImVuYWJsZWQiOnRydWV9fSwiZXhwIjoxNjgyMzQ4NTU5LCJzdWIiOiJhY2Nlc3MifQ.QA8g4gKyMwvPp89UEaDPpFvh37Blgu2jpowIMSpOgZE" id="NewsWidget-m58a2ee"></iframe>
+    <script>
+      window.top.addEventListener("message", function(msg) {
+        const widget = document.getElementById('NewsWidget-m58a2ee');
+        
+        if (!widget) return;
+        
+        const styles = msg.data?.styles;
+        if (styles) {
+          Object.keys(styles).forEach(key => widget.style.setProperty(key, styles[key]))
+        }
+      });
+    </script>
     </div>
 
-
-    
- <button onclick="s()"></button>
-</div>
-<script>
-    
-function randomColor() {
-    return '#'+ ('000000' + (Math.random()*0xFFFFFF<<0).toString(16)).slice(-6)
-}
-
-function setColor(){
-    document.getElementById('myDiv').style.backgroundColor = randomColor();
-    setTimeout(setColor, 2000);
-}
-setColor();
-
-const searchInput = document.querySelector("#search-input");
+<input style="margin-left: 32%; width: 50%;height: 30px;outline: 0%;border: 0px;border-radius: 10px; color: aliceblue;background-color: #2e2f30;" placeholder=" Type anything to search..." id="search-input" class="search-input" type="text">
+  <script>
+      const searchInput = document.querySelector("#search-input");
 
 searchInput.addEventListener("keydown", function(event) {
-    if(event.code === "Enter") {
-        search();
-    }
+  if(event.code === "Enter") {
+      search();
+  }
 });
 
 function search() {
-    const input = searchInput.value;
+  const input = searchInput.value;
 
-    window.location.href = "https://www.google.com/search?q=" + input + "&rlz=1C5CHFA_enNZ948NZ948&oq=" + input + "&aqs=chrome.0.69i59l2j46i175i199i433j46i199i291i433j46j0i433j0j69i60.875j0j9&sourceid=chrome&ie=UTF-8"
+  window.location.href = "https://www.google.com/search?q=" + input + "&rlz=1C5CHFA_enNZ948NZ948&oq=" + input + "&aqs=chrome.0.69i59l2j46i175i199i433j46i199i291i433j46j0i433j0j69i60.875j0j9&sourceid=chrome&ie=UTF-8"
 }
-</script>
-<style>
-    body{
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-    }
-    #myDiv {
-    background-color: rgb(69, 37, 37);
-    transition: background-color 2s;
-}
+  </script>
+<div style="width: 33%; display: table;">
+  <div style="display: table-row">
+      <div style="width: 200px; display: table-cell;"> <div class="link">
+        ‎ ‎ ‎ <a href="https://vibgyor-online.com/vibv1/"><img width="100px" src="./study.png" alt=""></a>
+      </div> </div>
+      <div style="display: table-cell;"> <div class="link">
+        ‎ ‎ ‎ <a href="https://youtube.com"><img width="100px" src="./youtube.png" alt=""></a>
+      </div> </div>
+      <div style="display: table-cell;"> <div class="link">
+        ‎ ‎ ‎ <a href="https://bespoke-macaron-304579.netlify.app/"><img width="100px" src="./text-box.png" alt=""></a>ko
+      </div> </div>
+      
+  
+  </div>
+</div>
+<body>
 
-</style>
+</body>
 </body>
 </html>
